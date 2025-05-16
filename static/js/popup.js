@@ -1,13 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Forzar la aparición del popup siempre (para pruebas)
     // Comprobar si el usuario ya ha visto el popup (usando localStorage)
-    const hasSeenPopup = localStorage.getItem('rebrandingPopupSeen');
+    // const hasSeenPopup = localStorage.getItem('rebrandingPopupSeen');
     
-    // Si no lo ha visto antes, mostrar el popup después de un breve retraso
-    if (!hasSeenPopup) {
-        setTimeout(function() {
-            showRebrandingPopup();
-        }, 1500); // Mostrar después de 1.5 segundos
-    }
+    // Mostrar el popup siempre para pruebas
+    setTimeout(function() {
+        showRebrandingPopup();
+    }, 1500); // Mostrar después de 1.5 segundos
     
     function showRebrandingPopup() {
         // Crear elementos del popup
