@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customs Service Solutions SRL - Especialistas en Comercio Exterior</title>
+    <meta name="description" content="Empresa argentina especializada en gestión de trámites aduaneros, importaciones, exportaciones y logística internacional.">
+    
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    
+    <!-- Google Translate -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'es',
+                includedLanguages: 'en,es,pt,zh-CN',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</head>
+<body>
+    <!-- Loader -->
+    <div id="loader" class="loader">
+        <div class="loader-content">
+            <img src="{{ url_for('static', filename='images/logo.svg') }}" alt="Customs Service Solutions Logo" class="loader-logo">
+            <h2>Customs Service Solutions SRL</h2>
+            <div class="loader-bar"><div class="loader-progress"></div></div>
+        </div>
+    </div>
+
+    <!-- Header and Navigation -->
+    <header id="header">
+        <div class="container">
+            <div class="logo-container">
+                <img src="{{ url_for('static', filename='images/logo.svg') }}" alt="Customs Service Solutions Logo" class="logo">
+                <div class="logo-text">
+                    <h1>Customs Service Solutions</h1>
+                    <p>SRL</p>
+                </div>
+            </div>
+            <nav>
+                <button class="mobile-menu-btn" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="#hero" class="nav-link">Inicio</a></li>
+                    <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+                    <li><a href="#servicios" class="nav-link">Servicios</a></li>
+                    <li><a href="#equipo" class="nav-link">Equipo</a></li>
+                    <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                    <li><div id="google_translate_element"></div></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div class="hero-overlay"></div>
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="animate-on-scroll">Expertos en Comercio Exterior</h1>
+                    <h2 class="animate-on-scroll">Soluciones aduaneras integrales para su empresa</h2>
+                    <p class="animate-on-scroll">Facilitamos sus operaciones de importación y exportación con asesoramiento profesional y gestión eficiente de trámites aduaneros.</p>
+                    <a href="#contacto" class="btn primary-btn animate-on-scroll">Contáctenos</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nosotros Section -->
+        <section id="nosotros" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="animate-on-scroll">Nosotros</h2>
+                    <div class="separator animate-on-scroll"></div>
+                </div>
+                <div class="content-wrapper">
+                    <div class="text-content animate-on-scroll">
+                        <p>Customs Service Solutions SRL es una empresa argentina especializada en comercio exterior y asesoramiento aduanero, con amplia experiencia en la gestión de importaciones, exportaciones y logística internacional.</p>
+                        <p>Desde nuestra fundación, nos hemos consolidado como socios estratégicos de empresas que buscan optimizar sus operaciones internacionales, ofreciendo un servicio integral que combina conocimiento técnico, experiencia práctica y atención personalizada.</p>
+                        <p>Nuestro equipo de profesionales altamente calificados trabaja constantemente para brindar soluciones eficientes y adaptadas a las necesidades específicas de cada cliente, garantizando el cumplimiento de todas las normativas aduaneras vigentes.</p>
+                    </div>
+                </div>
+
+                <!-- Misión y Visión -->
+                <div class="mission-vision">
+                    <div class="mission animate-on-scroll">
+                        <h3>Misión</h3>
+                        <p>Facilitar y optimizar las operaciones de comercio exterior de nuestros clientes, brindando un servicio integral, confiable y de calidad que les permita expandir sus negocios a nivel internacional de manera eficiente y segura.</p>
+                    </div>
+                    <div class="vision animate-on-scroll">
+                        <h3>Visión</h3>
+                        <p>Ser reconocidos como líderes en el sector de comercio exterior en Argentina, distinguidos por la excelencia en el servicio, la innovación constante y el compromiso con el éxito de nuestros clientes en el mercado global.</p>
+                    </div>
+                </div>
+
+                <!-- Valores -->
+                <div class="section-subheader">
+                    <h3 class="animate-on-scroll">Nuestros Valores</h3>
+                </div>
+                <div class="valores">
+                    <div class="valor-card animate-on-scroll">
+                        <div class="valor-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h4>Compromiso</h4>
+                        <p>Nos comprometemos con cada proyecto como si fuera propio, asegurando resultados óptimos.</p>
+                    </div>
+                    <div class="valor-card animate-on-scroll">
+                        <div class="valor-icon">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <h4>Transparencia</h4>
+                        <p>Actuamos con honestidad y claridad en todos nuestros procesos y comunicaciones.</p>
+                    </div>
+                    <div class="valor-card animate-on-scroll">
+                        <div class="valor-icon">
+                            <i class="fas fa-tachometer-alt"></i>
+                        </div>
+                        <h4>Eficiencia</h4>
+                        <p>Optimizamos recursos y procesos para ofrecer soluciones ágiles y efectivas.</p>
+                    </div>
+                    <div class="valor-card animate-on-scroll">
+                        <div class="valor-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <h4>Confidencialidad</h4>
+                        <p>Protegemos la información de nuestros clientes con los más altos estándares de seguridad.</p>
+                    </div>
+                    <div class="valor-card animate-on-scroll">
+                        <div class="valor-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h4>Innovación</h4>
+                        <p>Buscamos constantemente nuevas formas de mejorar nuestros servicios y procesos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Carrusel de Imágenes -->
+        <section id="carrusel" class="section carousel-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="animate-on-scroll">Nuestro Mundo</h2>
+                    <div class="separator animate-on-scroll"></div>
+                </div>
+                <div class="carousel-container animate-on-scroll">
+                    <div class="carousel">
+                        <div class="carousel-track">
+                            <!-- Las imágenes se cargarán dinámicamente -->
+                        </div>
+                    </div>
+                    <button class="carousel-btn prev-btn" aria-label="Anterior">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="carousel-btn next-btn" aria-label="Siguiente">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Servicios Section -->
+        <section id="servicios" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="animate-on-scroll">Nuestros Servicios</h2>
+                    <div class="separator animate-on-scroll"></div>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card animate-on-scroll">
+                        <div class="service-icon">
+                            <i class="fas fa-file-import"></i>
+                        </div>
+                        <h3>Importaciones</h3>
+                        <p>Gestión integral del proceso de importación de mercaderías, incluyendo documentación, permisos y logística.</p>
+                    </div>
+                    <div class="service-card animate-on-scroll">
+                        <div class="service-icon">
+                            <i class="fas fa-file-export"></i>
+                        </div>
+                        <h3>Exportaciones</h3>
+                        <p>Asesoramiento y gestión de exportaciones, trámites aduaneros y coordinación logística internacional.</p>
+                    </div>
+                    <div class="service-card animate-on-scroll">
+                        <div class="service-icon">
+                            <i class="fas fa-clipboard-check"></i>
+                        </div>
+                        <h3>Clasificación Arancelaria</h3>
+                        <p>Determinación precisa de la posición arancelaria de sus productos para optimizar costos aduaneros.</p>
+                    </div>
+                    <div class="service-card animate-on-scroll">
+                        <div class="service-icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <h3>Logística Internacional</h3>
+                        <p>Coordinación de transporte marítimo, aéreo y terrestre para sus operaciones de comercio exterior.</p>
+                    </div>
+                    <div class="service-card animate-on-scroll">
+                        <div class="service-icon">
+                            <i class="fas fa-gavel"></i>
+                        </div>
+                        <h3>Asesoría Legal Aduanera</h3>
+                        <p>Consultoría especializada en normativas y regulaciones aduaneras nacionales e internacionales.</p>
+                    </div>
+                    <div class="service-card animate-on-scroll">
+                        <div class="service-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Consultoría Estratégica</h3>
+                        <p>Análisis y desarrollo de estrategias para optimizar sus operaciones de comercio exterior.</p>
+                    </div>
+                    <div class="service-card animate-on-scroll">
+                        <div class="service-icon">
+                            <i class="fas fa-money-bill-wave"></i>
+                        </div>
+                        <h3>Gestión de Pagos Internacionales</h3>
+                        <p>Asesoramiento en medios de pago, divisas y optimización de costos financieros.</p>
+                    </div>
+                    <div class="service-card animate-on-scroll">
+                        <div class="service-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Certificaciones y Permisos</h3>
+                        <p>Tramitación de certificados de origen, permisos especiales y documentación técnica.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Equipo Section -->
+        <section id="equipo" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="animate-on-scroll">Nuestro Equipo</h2>
+                    <div class="separator animate-on-scroll"></div>
+                </div>
+                <div class="team-grid">
+                    <div class="team-member animate-on-scroll">
+                        <div class="member-photo">
+                            <!-- Imagen de profesional de negocios 1 -->
+                            <img src="https://pixabay.com/get/g78f4fb41408a0e4b2d9602f306776ca43c7dfd1290088e78360c54966db66f3fb2a097ac747ae65ade3a021f8b6bf08550c6a9d5a910ac9c09437e111ae9c266_1280.jpg" alt="Carlos Méndez - CEO">
+                        </div>
+                        <div class="member-info">
+                            <h3>Carlos Méndez</h3>
+                            <p class="member-position">CEO y Fundador</p>
+                            <p>Con más de 20 años de experiencia en comercio exterior, lidera el equipo con su visión estratégica y profundo conocimiento del sector aduanero.</p>
+                        </div>
+                    </div>
+                    <div class="team-member animate-on-scroll">
+                        <div class="member-photo">
+                            <!-- Imagen de profesional de negocios 2 -->
+                            <img src="https://pixabay.com/get/ga8cccdc03a97935686f41e2856192caaa41f3d574520b934cd03f54c0444af9bc85d8277fdcc89a6e48476f2ff373043cc24e337d5d62d1119be0875cef560a2_1280.jpg" alt="Laura Gómez - Directora de Comercio Exterior">
+                        </div>
+                        <div class="member-info">
+                            <h3>Laura Gómez</h3>
+                            <p class="member-position">Directora de Comercio Exterior</p>
+                            <p>Especialista en comercio internacional con experiencia en asesoramiento a empresas de diversos sectores para su expansión global.</p>
+                        </div>
+                    </div>
+                    <div class="team-member animate-on-scroll">
+                        <div class="member-photo">
+                            <!-- Imagen de profesional de negocios 3 -->
+                            <img src="https://pixabay.com/get/g1035ce4e203c3a76f191b91d39a8aead651bcfd1ffb8731b085f6897273255caecfee81db1978bf6376b52418bae5f2821c9519eeb5769211c508e8f9afb556e_1280.jpg" alt="Martín Torres - Jefe de Aduanas">
+                        </div>
+                        <div class="member-info">
+                            <h3>Martín Torres</h3>
+                            <p class="member-position">Jefe de Aduanas</p>
+                            <p>Despachante de aduana matriculado con amplio conocimiento en normativas aduaneras y procedimientos de comercio exterior.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacto Section -->
+        <section id="contacto" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="animate-on-scroll">Contacto</h2>
+                    <div class="separator animate-on-scroll"></div>
+                </div>
+                <div class="contact-content">
+                    <div class="contact-info animate-on-scroll">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h3>Dirección</h3>
+                                <p>Sargento Cabral 40, 12º piso E<br>Avellaneda, Buenos Aires<br>Argentina</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h3>Email</h3>
+                                <p>info@customsservicesolutions.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h3>Teléfono</h3>
+                                <p>+54 11 4174 4221</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h3>Horario de Atención</h3>
+                                <p>Lunes a Viernes: 9:00 - 18:00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form-container animate-on-scroll">
+                        <form action="https://formspree.io/f/xkneklyk" method="POST" class="contact-form">
+                            <div class="form-group">
+                                <label for="name">Nombre *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Teléfono</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Asunto *</label>
+                                <input type="text" id="subject" name="subject" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Mensaje *</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn primary-btn">Enviar Mensaje</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="{{ url_for('static', filename='images/logo.svg') }}" alt="Customs Service Solutions Logo">
+                    <h3>Customs Service Solutions SRL</h3>
+                </div>
+                <div class="footer-info">
+                    <p><i class="fas fa-map-marker-alt"></i> Sargento Cabral 40, 12º piso E, Avellaneda, Buenos Aires, Argentina</p>
+                    <p><i class="fas fa-envelope"></i> info@customsservicesolutions.com</p>
+                    <p><i class="fas fa-phone"></i> +54 11 4174 4221</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Customs Service Solutions SRL. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/5491141744221" class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/carousel.js') }}"></script>
+</body>
+</html>
