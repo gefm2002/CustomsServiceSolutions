@@ -69,10 +69,22 @@
 
     <!-- Main Content -->
     <main>
-        <!-- Hero Section -->
-        <section id="hero" class="hero">
-            <div class="hero-overlay"></div>
+        <!-- Carrusel Hero Section -->
+        <section id="hero" class="section carousel-section hero-carousel">
             <div class="container">
+                <div class="carousel-container animate-on-scroll">
+                    <div class="carousel">
+                        <div class="carousel-track">
+                            <!-- Las imágenes se cargarán dinámicamente -->
+                        </div>
+                    </div>
+                    <button class="carousel-btn prev-btn" aria-label="Anterior">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="carousel-btn next-btn" aria-label="Siguiente">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
                 <div class="hero-content">
                     <h1 class="animate-on-scroll">Expertos en Comercio Exterior</h1>
                     <h2 class="animate-on-scroll">Soluciones aduaneras integrales para su empresa</h2>
@@ -153,28 +165,7 @@
             </div>
         </section>
 
-        <!-- Carrusel de Imágenes -->
-        <section id="carrusel" class="section carousel-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="animate-on-scroll">Nuestro Mundo</h2>
-                    <div class="separator animate-on-scroll"></div>
-                </div>
-                <div class="carousel-container animate-on-scroll">
-                    <div class="carousel">
-                        <div class="carousel-track">
-                            <!-- Las imágenes se cargarán dinámicamente -->
-                        </div>
-                    </div>
-                    <button class="carousel-btn prev-btn" aria-label="Anterior">
-                        <i class="fas fa-chevron-left"></i>
-                    </button>
-                    <button class="carousel-btn next-btn" aria-label="Siguiente">
-                        <i class="fas fa-chevron-right"></i>
-                    </button>
-                </div>
-            </div>
-        </section>
+
 
         <!-- Servicios Section -->
         <section id="servicios" class="section">
