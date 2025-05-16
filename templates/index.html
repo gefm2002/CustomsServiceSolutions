@@ -69,26 +69,9 @@
 
     <!-- Main Content -->
     <main>
-        <!-- Hero Section -->
-        <section id="hero" class="hero">
-            <div class="hero-overlay"></div>
+        <!-- Carrusel Hero Section -->
+        <section id="hero" class="section carousel-section hero-carousel">
             <div class="container">
-                <div class="hero-content">
-                    <h1 class="animate-on-scroll">Expertos en Comercio Exterior</h1>
-                    <h2 class="animate-on-scroll">Soluciones aduaneras integrales para su empresa</h2>
-                    <p class="animate-on-scroll">Facilitamos sus operaciones de importación y exportación con asesoramiento profesional y gestión eficiente de trámites aduaneros.</p>
-                    <a href="#contacto" class="btn primary-btn animate-on-scroll">Contáctenos</a>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Carrusel Section -->
-        <section id="carrusel" class="section carousel-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="animate-on-scroll">Nuestro Mundo</h2>
-                    <div class="separator animate-on-scroll"></div>
-                </div>
                 <div class="carousel-container animate-on-scroll">
                     <div class="carousel">
                         <div class="carousel-track">
@@ -101,6 +84,12 @@
                     <button class="carousel-btn next-btn" aria-label="Siguiente">
                         <i class="fas fa-chevron-right"></i>
                     </button>
+                </div>
+                <div class="hero-content">
+                    <h1 class="animate-on-scroll">Expertos en Comercio Exterior</h1>
+                    <h2 class="animate-on-scroll">Soluciones aduaneras integrales para su empresa</h2>
+                    <p class="animate-on-scroll">Facilitamos sus operaciones de importación y exportación con asesoramiento profesional y gestión eficiente de trámites aduaneros.</p>
+                    <a href="#contacto" class="btn primary-btn animate-on-scroll">Contáctenos</a>
                 </div>
             </div>
         </section>
@@ -387,6 +376,6 @@
     <!-- JavaScript -->
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
     <script src="{{ url_for('static', filename='js/carousel.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/style-switcher-fixed.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/style-switcher.js') }}"></script>
 </body>
 </html>

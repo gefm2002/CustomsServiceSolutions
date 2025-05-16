@@ -125,34 +125,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Style switching functionality
     const styleOptions = document.querySelectorAll('.style-option');
+    const currentStyleLink = document.querySelector('link[href*="css/styles"]');
     
-    // Create links for all style options but keep them disabled initially
-    const head = document.head;
-    const styles = {
-        'styles': "{{ url_for('static', filename='css/styles.css') }}",
-        'styles-flat': "{{ url_for('static', filename='css/styles-flat.css') }}",
-        'styles-glass': "{{ url_for('static', filename='css/styles-glass.css') }}",
-        'styles-neuro': "{{ url_for('static', filename='css/styles-neuro.css') }}"
-    };
+    // Store original href
+    const originalHref = currentStyleLink.getAttribute('href');
     
-    // Create link elements for all styles
-    const styleLinks = {};
-    Object.keys(styles).forEach(style => {
-        if (style !== 'styles') { // Skip the default one as it's already in the document
-            const link = document.createElement('link');
-            link.rel = 'stylesheet';
-            link.href = styles[style];
-            link.disabled = true; // Disable by default
-            head.appendChild(link);
-            styleLinks[style] = link;
-        }
-    });
-    
-    // Get the default stylesheet
-    const defaultStyleLink = document.querySelector('link[href*="css/styles.css"]');
-    styleLinks['styles'] = defaultStyleLink;
-    
-    // Handle style switching
     styleOptions.forEach(option => {
         option.addEventListener('click', function() {
             const style = this.getAttribute('data-style');
@@ -161,14 +138,9 @@ document.addEventListener('DOMContentLoaded', function() {
             styleOptions.forEach(opt => opt.classList.remove('active'));
             this.classList.add('active');
             
-            // Enable selected stylesheet and disable others
-            Object.keys(styleLinks).forEach(key => {
-                if (key === style) {
-                    styleLinks[key].disabled = false;
-                } else {
-                    styleLinks[key].disabled = true;
-                }
-            });
+            // Change stylesheet
+            const newHref = originalHref.replace(/css\/styles[^\.]*\.css/, `css/${style}.css`);
+            currentStyleLink.setAttribute('href', newHref);
             
             // Save preference in localStorage
             localStorage.setItem('preferredStyle', style);

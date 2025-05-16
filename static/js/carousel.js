@@ -1,16 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize carousel - using querySelectorAll to handle multiple carousels
-    const carouselTracks = document.querySelectorAll('.carousel-track');
-    const prevBtns = document.querySelectorAll('.prev-btn');
-    const nextBtns = document.querySelectorAll('.next-btn');
-    
-    // Exit if no carousel is found
-    if (!carouselTracks.length) return;
-    
-    // Get the first carousel elements (backward compatibility)
-    const carouselTrack = carouselTracks[0];
-    const prevBtn = prevBtns[0];
-    const nextBtn = nextBtns[0];
+    // Initialize carousel
+    const carouselTrack = document.querySelector('.carousel-track');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
     
     // Stock photos for carousel
     const images = [
