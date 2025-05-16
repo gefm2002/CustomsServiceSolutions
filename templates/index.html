@@ -38,6 +38,29 @@
             <div class="loader-bar"><div class="loader-progress"></div></div>
         </div>
     </div>
+    
+    <!-- Popup de Rebranding -->
+    <div id="rebrandingPopup" class="rebranding-popup-overlay">
+        <div class="rebranding-popup">
+            <div class="popup-header">
+                <h3>¡Próximamente novedades!</h3>
+                <button class="popup-close" aria-label="Cerrar" onclick="closeRebrandingPopup()">&times;</button>
+            </div>
+            <div class="popup-body">
+                <div class="popup-icon">
+                    <i class="fas fa-paint-brush"></i>
+                </div>
+                <p>Estamos trabajando en una renovación completa de nuestra marca e identidad visual.</p>
+                <p>¡Muy pronto presentaremos un nuevo diseño con mejoras en experiencia y funcionalidades!</p>
+            </div>
+            <div class="popup-footer">
+                <button class="popup-btn primary-btn" onclick="closeRebrandingPopup()">¡Mantenerme informado!</button>
+                <label class="dont-show-again">
+                    <input type="checkbox" id="dontShowAgain"> No mostrar de nuevo
+                </label>
+            </div>
+        </div>
+    </div>
 
     <!-- Header and Navigation -->
     <header id="header">
