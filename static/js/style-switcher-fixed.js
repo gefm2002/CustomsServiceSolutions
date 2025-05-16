@@ -126,31 +126,20 @@ document.addEventListener('DOMContentLoaded', function() {
     // Style switching functionality
     const styleOptions = document.querySelectorAll('.style-option');
     
-    // Create links for all style options but keep them disabled initially
-    const head = document.head;
-    const styles = {
-        'styles': "{{ url_for('static', filename='css/styles.css') }}",
-        'styles-flat': "{{ url_for('static', filename='css/styles-flat.css') }}",
-        'styles-glass': "{{ url_for('static', filename='css/styles-glass.css') }}",
-        'styles-neuro': "{{ url_for('static', filename='css/styles-neuro.css') }}"
+    // Create links for all styles (using direct paths instead of Flask url_for)
+    const styleLinks = {
+        'styles': '/static/css/styles.css',
+        'styles-flat': '/static/css/styles-flat.css',
+        'styles-glass': '/static/css/styles-glass.css',
+        'styles-neuro': '/static/css/styles-neuro.css'
     };
     
-    // Create link elements for all styles
-    const styleLinks = {};
-    Object.keys(styles).forEach(style => {
-        if (style !== 'styles') { // Skip the default one as it's already in the document
-            const link = document.createElement('link');
-            link.rel = 'stylesheet';
-            link.href = styles[style];
-            link.disabled = true; // Disable by default
-            head.appendChild(link);
-            styleLinks[style] = link;
-        }
-    });
-    
-    // Get the default stylesheet
-    const defaultStyleLink = document.querySelector('link[href*="css/styles.css"]');
-    styleLinks['styles'] = defaultStyleLink;
+    // Get the main stylesheet link
+    const mainStyleLink = document.querySelector('link[href*="css/styles.css"]');
+    if (!mainStyleLink) {
+        console.error('Main stylesheet not found');
+        return;
+    }
     
     // Handle style switching
     styleOptions.forEach(option => {
@@ -161,14 +150,8 @@ document.addEventListener('DOMContentLoaded', function() {
             styleOptions.forEach(opt => opt.classList.remove('active'));
             this.classList.add('active');
             
-            // Enable selected stylesheet and disable others
-            Object.keys(styleLinks).forEach(key => {
-                if (key === style) {
-                    styleLinks[key].disabled = false;
-                } else {
-                    styleLinks[key].disabled = true;
-                }
-            });
+            // Change stylesheet
+            mainStyleLink.href = styleLinks[style];
             
             // Save preference in localStorage
             localStorage.setItem('preferredStyle', style);
@@ -177,7 +160,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Check for saved preference
     const savedStyle = localStorage.getItem('preferredStyle');
-    if (savedStyle) {
+    if (savedStyle && styleLinks[savedStyle]) {
         // Find and click the appropriate style option
         const savedOption = document.querySelector(`.style-option[data-style="${savedStyle}"]`);
         if (savedOption) {

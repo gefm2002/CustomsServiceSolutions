@@ -356,25 +356,27 @@ p {
 }
 
 /* ===== Hero Section ===== */
-.hero-carousel {
-    padding-top: 80px; /* Adjust for header height */
-    min-height: 100vh;
+.hero {
+    height: 100vh;
+    min-height: 600px;
     position: relative;
-    background-color: var(--bg-light);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--text-white);
+    background-image: url('https://pixabay.com/get/g8bbbe66c38e37d29c2e6ddd793fc7eba8f73a20d5e81f96611713b55f97777bd0a585fbb67d8af8335be730c8f9eb5a50ac4155aedd9146a90b2ea0b253a669b_1280.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-.hero-carousel .carousel-container {
-    margin-bottom: var(--spacing-lg);
-    height: 60vh;
-    min-height: 400px;
-}
-
-.hero-carousel .carousel {
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    border-radius: var(--border-radius-lg);
-    overflow: hidden;
-    box-shadow: var(--shadow-lg);
+    background-color: rgba(0, 64, 128, 0.7);
 }
 
 .hero-content {
@@ -382,30 +384,24 @@ p {
     z-index: var(--z-normal);
     max-width: 800px;
     margin: 0 auto;
-    padding: var(--spacing-lg);
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow-md);
-    margin-bottom: var(--spacing-xl);
+    padding: 0 var(--spacing-md);
 }
 
 .hero-content h1 {
-    font-size: 2.8rem;
+    font-size: 3rem;
     margin-bottom: var(--spacing-md);
-    color: var(--primary-color);
+    color: var(--text-white);
 }
 
 .hero-content h2 {
     font-size: 1.5rem;
     margin-bottom: var(--spacing-lg);
-    color: var(--secondary-color);
+    color: var(--text-white);
 }
 
 .hero-content p {
     font-size: 1.1rem;
     margin-bottom: var(--spacing-lg);
-    color: var(--text-color);
 }
 
 /* ===== Nosotros Section ===== */
