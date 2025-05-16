@@ -289,15 +289,19 @@ p {
 }
 
 .logo-text h1 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    font-weight: var(--font-weight-bold);
     margin-bottom: 0;
     color: var(--primary-color);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
 }
 
 .logo-text p {
     font-size: 0.8rem;
     margin-bottom: 0;
     color: var(--text-light);
+    letter-spacing: 0.5px;
 }
 
 .nav-menu {
