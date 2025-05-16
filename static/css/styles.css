@@ -861,12 +861,27 @@ footer {
 .popup-body {
     padding: 20px;
     text-align: center;
+    max-height: 60vh;
+    overflow-y: auto;
 }
 
 .popup-icon {
     font-size: 3rem;
     color: var(--primary-color);
     margin-bottom: 15px;
+}
+
+.popup-language {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: rgba(240, 240, 240, 0.3);
+}
+
+.popup-language h4 {
+    color: var(--primary-color);
+    margin-bottom: 8px;
+    font-size: 1.1rem;
 }
 
 .popup-body p {

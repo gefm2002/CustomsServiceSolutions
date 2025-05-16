@@ -43,20 +43,39 @@
     <div id="rebrandingPopup" class="rebranding-popup-overlay">
         <div class="rebranding-popup">
             <div class="popup-header">
-                <h3>¡Próximamente novedades!</h3>
+                <h3>¡Próximamente novedades! / Coming Soon! / 即将推出！</h3>
                 <button class="popup-close" aria-label="Cerrar" onclick="closeRebrandingPopup()">&times;</button>
             </div>
             <div class="popup-body">
                 <div class="popup-icon">
                     <i class="fas fa-paint-brush"></i>
                 </div>
-                <p>Estamos trabajando en una renovación completa de nuestra marca e identidad visual.</p>
-                <p>¡Muy pronto presentaremos un nuevo diseño con mejoras en experiencia y funcionalidades!</p>
+                
+                <!-- Español -->
+                <div class="popup-language">
+                    <h4>Español</h4>
+                    <p>Estamos trabajando en una renovación completa de nuestra marca e identidad visual.</p>
+                    <p>¡Muy pronto presentaremos un nuevo diseño con mejoras en experiencia y funcionalidades!</p>
+                </div>
+                
+                <!-- Inglés -->
+                <div class="popup-language">
+                    <h4>English</h4>
+                    <p>We are working on a complete renovation of our brand and visual identity.</p>
+                    <p>Coming soon: a new design with improved experience and enhanced features!</p>
+                </div>
+                
+                <!-- Chino -->
+                <div class="popup-language">
+                    <h4>中文</h4>
+                    <p>我们正在对我们的品牌和视觉形象进行全面革新。</p>
+                    <p>即将推出：全新设计，提升用户体验和增强功能！</p>
+                </div>
             </div>
             <div class="popup-footer">
-                <button class="popup-btn primary-btn" onclick="closeRebrandingPopup()">¡Mantenerme informado!</button>
+                <button class="popup-btn primary-btn" onclick="closeRebrandingPopup()">OK / 确定</button>
                 <label class="dont-show-again">
-                    <input type="checkbox" id="dontShowAgain"> No mostrar de nuevo
+                    <input type="checkbox" id="dontShowAgain"> No mostrar de nuevo / Don't show again / 不再显示
                 </label>
             </div>
         </div>
